@@ -3,47 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎄 MERRY CHRISTMAS 🎄 Welcome to the TACKIEST Site on the Internet!</title>
+    <title>🦝🍾 THE TRASHED PANDA 🎄✨ Virginia's Most Legendary Holiday Hero</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Chewy&family=Comic+Neue:wght@400;700&family=Mountains+of+Christmas:wght@400;700&family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&family=Fredoka+One&display=swap');
-        
+        :root {
+            --raccoon-purple: #7B3FA0;
+            --bourbon-gold: #D4A017;
+            --christmas-red: #C41E3A;
+            --christmas-green: #228B22;
+            --trash-silver: #C0C0C0;
+            --ceiling-tile-beige: #F5DEB3;
+            --drunk-pink: #FF69B4;
+            --sparkle-white: #FFFAFA;
+            --liquor-amber: #FFBF00;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
+        /* UGLY PLAID BACKGROUND - AS REQUESTED */
         body {
-            background: linear-gradient(180deg, #1a472a 0%, #2d5a3f 50%, #1a472a 100%);
-            min-height: 100vh;
+            font-family: 'Comic Neue', cursive;
+            background: 
+                repeating-linear-gradient(
+                    45deg,
+                    #2d5016 0px,
+                    #2d5016 20px,
+                    #8B0000 20px,
+                    #8B0000 40px
+                ),
+                repeating-linear-gradient(
+                    -45deg,
+                    transparent 0px,
+                    transparent 20px,
+                    rgba(255, 215, 0, 0.3) 20px,
+                    rgba(255, 215, 0, 0.3) 40px
+                );
+            background-color: #1a472a;
+            color: #fff;
             overflow-x: hidden;
-            font-family: 'Mountains of Christmas', cursive;
-            cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><text y="28" font-size="28">🎅</text></svg>'), auto;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><text y="24" font-size="24">🦝</text></svg>'), auto;
         }
-        
-        /* Falling Snow */
-        .snowflakes {
+
+        /* SNOWFLAKES FALLING */
+        .snowflake {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: -50px;
+            color: #fff;
+            font-size: 1.5em;
+            text-shadow: 0 0 5px #fff;
+            animation: fall linear infinite;
             pointer-events: none;
             z-index: 1000;
         }
-        
-        .snowflake {
-            position: absolute;
-            top: -20px;
-            color: white;
-            font-size: 1.5em;
-            animation: fall linear infinite;
-            text-shadow: 0 0 5px white;
-        }
-        
+
         @keyframes fall {
             0% {
-                transform: translateY(-20px) rotate(0deg);
+                transform: translateY(-50px) rotate(0deg);
                 opacity: 1;
             }
             100% {
@@ -51,542 +72,1502 @@
                 opacity: 0.3;
             }
         }
-        
-        /* Blinking Christmas Lights Border */
-        .lights-border {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            pointer-events: none;
-            z-index: 999;
-        }
-        
-        .light-string {
-            position: absolute;
-            display: flex;
-        }
-        
-        .light-string.top {
-            top: 5px;
-            left: 0;
-            right: 0;
-            justify-content: space-around;
-        }
-        
-        .light-string.bottom {
-            bottom: 5px;
-            left: 0;
-            right: 0;
-            justify-content: space-around;
-        }
-        
-        .light-string.left {
-            left: 5px;
-            top: 0;
-            bottom: 0;
-            flex-direction: column;
-            justify-content: space-around;
-        }
-        
-        .light-string.right {
-            right: 5px;
-            top: 0;
-            bottom: 0;
-            flex-direction: column;
-            justify-content: space-around;
-        }
-        
-        .bulb {
-            width: 15px;
-            height: 20px;
-            border-radius: 50% 50% 50% 50%;
-            animation: blink 0.5s ease-in-out infinite alternate;
-        }
-        
-        .bulb.red { background: #ff0000; box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
-        .bulb.green { background: #00ff00; box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00; animation-delay: 0.1s; }
-        .bulb.blue { background: #0066ff; box-shadow: 0 0 10px #0066ff, 0 0 20px #0066ff; animation-delay: 0.2s; }
-        .bulb.yellow { background: #ffff00; box-shadow: 0 0 10px #ffff00, 0 0 20px #ffff00; animation-delay: 0.3s; }
-        .bulb.pink { background: #ff69b4; box-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4; animation-delay: 0.4s; }
-        
-        @keyframes blink {
-            0% { opacity: 0.4; transform: scale(0.9); }
-            100% { opacity: 1; transform: scale(1.1); }
-        }
-        
-        /* Main Content */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        /* Giant Spinning Title */
-        .title-container {
+
+        /* BREAKING NEWS BANNER */
+        .breaking-news {
+            background: linear-gradient(90deg, #C41E3A, #8B0000, #C41E3A);
+            color: #FFD700;
+            padding: 10px;
+            font-family: 'Bangers', cursive;
+            font-size: 1.2em;
             text-align: center;
-            margin-bottom: 30px;
+            animation: pulse-red 0.5s ease-in-out infinite alternate;
+            border-bottom: 4px dashed #FFD700;
+            text-shadow: 2px 2px 0 #000;
+            letter-spacing: 2px;
         }
-        
-        h1 {
-            font-size: 4em;
-            color: #ff0000;
-            text-shadow: 
-                3px 3px 0 #00ff00,
-                6px 6px 0 #ffffff,
-                0 0 20px #ff0000,
-                0 0 40px #ff0000;
-            animation: rainbow 2s linear infinite, wobble 0.5s ease-in-out infinite;
+
+        .breaking-news .scroll-text {
             display: inline-block;
+            animation: scroll-left 20s linear infinite;
         }
-        
-        @keyframes rainbow {
-            0% { color: #ff0000; }
-            25% { color: #00ff00; }
-            50% { color: #ff0000; }
-            75% { color: #ffffff; }
-            100% { color: #ff0000; }
-        }
-        
-        @keyframes wobble {
-            0%, 100% { transform: rotate(-3deg); }
-            50% { transform: rotate(3deg); }
-        }
-        
-        .subtitle {
-            font-size: 2em;
-            color: #ffd700;
-            text-shadow: 2px 2px 4px #000;
-            animation: pulse 1s ease-in-out infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-        }
-        
-        /* Marquee Banner */
-        .marquee-container {
-            background: linear-gradient(90deg, #ff0000, #00ff00, #ff0000);
-            padding: 10px 0;
-            margin: 20px 0;
-            border: 5px dashed #ffd700;
-            overflow: hidden;
-        }
-        
-        .marquee {
-            display: inline-block;
-            white-space: nowrap;
-            animation: marquee 15s linear infinite;
-            font-size: 1.5em;
-            color: white;
-            text-shadow: 2px 2px #000;
-        }
-        
-        @keyframes marquee {
+
+        @keyframes scroll-left {
             0% { transform: translateX(100%); }
             100% { transform: translateX(-100%); }
         }
-        
-        /* Spinning Decorations */
-        .decorations {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin: 30px 0;
+
+        @keyframes pulse-red {
+            from { box-shadow: 0 0 20px #C41E3A; }
+            to { box-shadow: 0 0 40px #FFD700; }
         }
-        
-        .decoration {
-            font-size: 4em;
-            animation: spin 3s linear infinite;
-            display: inline-block;
+
+        /* SPARKLE BORDER */
+        .sparkle-border {
+            background: linear-gradient(90deg, 
+                #FFD700, #FF69B4, #00FFFF, #FFD700, #FF69B4, #00FFFF, #FFD700
+            );
+            background-size: 300% 100%;
+            animation: sparkle-shift 2s linear infinite;
+            padding: 5px;
         }
-        
-        .decoration:nth-child(even) {
-            animation-direction: reverse;
+
+        @keyframes sparkle-shift {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 300% 50%; }
         }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg) scale(1); }
-            50% { transform: rotate(180deg) scale(1.3); }
-            100% { transform: rotate(360deg) scale(1); }
-        }
-        
-        /* Bouncing Elements */
-        .bouncing {
-            animation: bounce 0.6s ease-in-out infinite;
-        }
-        
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-        
-        /* Christmas Tree */
-        .tree-section {
-            text-align: center;
-            margin: 40px 0;
-        }
-        
-        .ascii-tree {
-            font-family: monospace;
-            font-size: 1.2em;
-            color: #00ff00;
-            text-shadow: 0 0 10px #00ff00;
-            white-space: pre;
-            display: inline-block;
-            animation: glow 1s ease-in-out infinite alternate;
-        }
-        
-        @keyframes glow {
-            0% { text-shadow: 0 0 10px #00ff00; }
-            100% { text-shadow: 0 0 30px #00ff00, 0 0 50px #ffff00; }
-        }
-        
-        /* Gift Boxes */
-        .gifts {
+
+        /* NAVIGATION */
+        nav {
+            background: linear-gradient(180deg, 
+                #1a472a 0%, 
+                #2d5016 50%, 
+                #8B0000 100%
+            );
+            padding: 15px;
             display: flex;
             justify-content: center;
-            gap: 20px;
             flex-wrap: wrap;
-            margin: 30px 0;
+            gap: 10px;
+            border-bottom: 8px solid;
+            border-image: repeating-linear-gradient(
+                90deg,
+                #FFD700 0px,
+                #FFD700 20px,
+                #C0C0C0 20px,
+                #C0C0C0 40px,
+                #FFD700 40px
+            ) 1;
         }
-        
-        .gift {
-            font-size: 5em;
-            animation: shake 0.5s ease-in-out infinite;
+
+        nav a {
+            font-family: 'Chewy', cursive;
+            font-size: 1.3em;
+            color: #FFD700;
+            text-decoration: none;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 50px;
+            border: 3px dashed #FF69B4;
+            transition: all 0.3s ease;
+            text-shadow: 2px 2px 0 #8B0000;
         }
-        
-        .gift:nth-child(2) { animation-delay: 0.1s; }
-        .gift:nth-child(3) { animation-delay: 0.2s; }
-        .gift:nth-child(4) { animation-delay: 0.3s; }
-        .gift:nth-child(5) { animation-delay: 0.4s; }
-        
-        @keyframes shake {
-            0%, 100% { transform: rotate(-5deg); }
-            50% { transform: rotate(5deg); }
+
+        nav a:hover {
+            background: #FFD700;
+            color: #1a472a;
+            transform: rotate(-5deg) scale(1.1);
+            border-style: solid;
         }
-        
-        /* Message Box */
-        .message-box {
-            background: linear-gradient(45deg, #ff0000, #008000);
-            border: 10px solid #ffd700;
-            border-radius: 20px;
-            padding: 30px;
-            margin: 30px auto;
-            max-width: 600px;
+
+        /* HERO SECTION */
+        .hero {
             text-align: center;
-            animation: borderBlink 0.5s linear infinite;
-            box-shadow: 0 0 30px #ffd700;
+            padding: 40px 20px;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(255, 215, 0, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 105, 180, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(196, 30, 58, 0.4) 0%, transparent 70%),
+                linear-gradient(180deg, rgba(26, 71, 42, 0.9) 0%, rgba(139, 0, 0, 0.9) 100%);
+            position: relative;
+            overflow: hidden;
         }
-        
-        @keyframes borderBlink {
-            0%, 100% { border-color: #ffd700; }
-            50% { border-color: #ff0000; }
-        }
-        
-        .message-box p {
-            font-size: 1.5em;
-            color: white;
-            text-shadow: 2px 2px 4px #000;
-            margin: 10px 0;
-        }
-        
-        /* Counter */
-        .counter-section {
-            text-align: center;
-            margin: 40px 0;
-            padding: 20px;
-            background: rgba(255,0,0,0.3);
-            border-radius: 15px;
-        }
-        
-        .counter-title {
+
+        .hero::before {
+            content: "🎄🦝🍾🎄🦝🍾🎄🦝🍾🎄🦝🍾🎄🦝🍾";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
             font-size: 2em;
-            color: #ffd700;
+            animation: emoji-scroll 10s linear infinite;
+            opacity: 0.5;
+        }
+
+        @keyframes emoji-scroll {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0%); }
+        }
+
+        .hero h1 {
+            font-family: 'Mountains of Christmas', cursive;
+            font-size: clamp(3em, 10vw, 8em);
+            color: #FFD700;
+            text-shadow: 
+                4px 4px 0 #C41E3A,
+                8px 8px 0 #228B22,
+                12px 12px 0 #7B3FA0,
+                0 0 50px #FFD700,
+                0 0 100px #FF69B4;
+            animation: wobble 2s ease-in-out infinite;
+            line-height: 1.1;
+        }
+
+        @keyframes wobble {
+            0%, 100% { transform: rotate(-2deg); }
+            50% { transform: rotate(2deg); }
+        }
+
+        .hero h2 {
+            font-family: 'Bangers', cursive;
+            font-size: clamp(1.5em, 4vw, 2.5em);
+            color: #FF69B4;
+            text-shadow: 2px 2px 0 #000;
+            margin: 20px 0;
+            letter-spacing: 3px;
+        }
+
+        /* RACCOON HERO IMAGE CONTAINER */
+        .raccoon-hero {
+            width: 300px;
+            height: 300px;
+            margin: 30px auto;
+            background: linear-gradient(135deg, #FFD700, #FF69B4, #00FFFF, #7B3FA0);
+            border-radius: 50%;
+            padding: 10px;
+            animation: spin-slow 20s linear infinite;
+            position: relative;
+        }
+
+        .raccoon-hero:hover {
+            animation: spin-dizzy 0.5s ease-in-out infinite;
+        }
+
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes spin-dizzy {
+            0% { transform: rotate(0deg) scale(1); }
+            25% { transform: rotate(15deg) scale(1.05); }
+            50% { transform: rotate(-10deg) scale(1); }
+            75% { transform: rotate(10deg) scale(1.05); }
+            100% { transform: rotate(0deg) scale(1); }
+        }
+
+        .raccoon-hero-inner {
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle, #2d2d2d 0%, #1a1a1a 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8em;
+            animation: spin-slow 20s linear infinite reverse;
+            position: relative;
+        }
+
+        .raccoon-hero-inner::after {
+            content: "🎅";
+            position: absolute;
+            top: -10px;
+            font-size: 0.4em;
+        }
+
+        /* CTA BUTTON */
+        .cta-button {
+            display: inline-block;
+            font-family: 'Bangers', cursive;
+            font-size: 2em;
+            color: #1a472a;
+            background: linear-gradient(180deg, #FFD700, #FFA500);
+            padding: 20px 50px;
+            border-radius: 100px;
+            text-decoration: none;
+            border: 5px solid #C41E3A;
+            margin-top: 30px;
+            box-shadow: 
+                0 10px 0 #8B0000,
+                0 0 30px rgba(255, 215, 0, 0.5);
+            transition: all 0.2s ease;
+            text-shadow: 1px 1px 0 #fff;
+            animation: bounce 1s ease-in-out infinite;
+        }
+
+        .cta-button:hover {
+            transform: translateY(5px);
+            box-shadow: 
+                0 5px 0 #8B0000,
+                0 0 50px rgba(255, 215, 0, 0.8);
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        section:nth-child(odd) {
+            background: 
+                repeating-linear-gradient(
+                    0deg,
+                    rgba(139, 0, 0, 0.1) 0px,
+                    rgba(139, 0, 0, 0.1) 2px,
+                    transparent 2px,
+                    transparent 20px
+                ),
+                linear-gradient(180deg, rgba(26, 71, 42, 0.95) 0%, rgba(45, 80, 22, 0.95) 100%);
+        }
+
+        section:nth-child(even) {
+            background: 
+                repeating-linear-gradient(
+                    90deg,
+                    rgba(255, 215, 0, 0.1) 0px,
+                    rgba(255, 215, 0, 0.1) 2px,
+                    transparent 2px,
+                    transparent 20px
+                ),
+                linear-gradient(180deg, rgba(139, 0, 0, 0.95) 0%, rgba(100, 0, 0, 0.95) 100%);
+        }
+
+        .section-title {
+            font-family: 'Mountains of Christmas', cursive;
+            font-size: clamp(2em, 6vw, 4em);
+            color: #FFD700;
+            text-align: center;
+            text-shadow: 
+                3px 3px 0 #C41E3A,
+                6px 6px 0 #228B22;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::before,
+        .section-title::after {
+            content: "✨🦝✨";
+            font-size: 0.5em;
+        }
+
+        /* LEGEND SECTION */
+        .legend-content {
+            background: rgba(0, 0, 0, 0.6);
+            border: 5px dashed #FFD700;
+            border-radius: 30px;
+            padding: 40px;
+            position: relative;
+        }
+
+        .legend-content::before {
+            content: "📜 OFFICIAL HISTORICAL DOCUMENT 📜";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #C41E3A;
+            color: #FFD700;
+            padding: 5px 20px;
+            font-family: 'Bangers', cursive;
+            border-radius: 20px;
+            white-space: nowrap;
+        }
+
+        .legend-content p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .legend-content p::first-letter {
+            font-family: 'Mountains of Christmas', cursive;
+            font-size: 3em;
+            float: left;
+            color: #FFD700;
+            text-shadow: 2px 2px 0 #C41E3A;
+            margin-right: 10px;
+            line-height: 0.8;
+        }
+
+        /* TIMELINE */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 10px;
+            background: repeating-linear-gradient(
+                180deg,
+                #FFD700 0px,
+                #FFD700 20px,
+                #C41E3A 20px,
+                #C41E3A 40px
+            );
+            transform: translateX(-50%);
+            border-radius: 5px;
+        }
+
+        .timeline-event {
+            display: flex;
+            align-items: center;
+            margin: 30px 0;
+            position: relative;
+        }
+
+        .timeline-event:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        .timeline-event:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            flex: 1;
+            background: rgba(0, 0, 0, 0.7);
+            border: 3px solid #FF69B4;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 0 30px;
+            position: relative;
+        }
+
+        .timeline-event:nth-child(odd) .timeline-content {
+            text-align: right;
+        }
+
+        .timeline-time {
+            font-family: 'Bangers', cursive;
+            font-size: 1.5em;
+            color: #FFD700;
+        }
+
+        .timeline-emoji {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2.5em;
+            background: #1a472a;
+            padding: 10px;
+            border-radius: 50%;
+            border: 4px solid #FFD700;
+        }
+
+        /* WITNESS QUOTES */
+        .witness-quotes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .quote-card {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 105, 180, 0.2));
+            border: 4px solid;
+            border-image: linear-gradient(45deg, #FFD700, #FF69B4, #00FFFF) 1;
+            border-radius: 20px;
+            padding: 25px;
+            position: relative;
+            transform: rotate(-2deg);
+            transition: transform 0.3s ease;
+        }
+
+        .quote-card:nth-child(even) {
+            transform: rotate(2deg);
+        }
+
+        .quote-card:hover {
+            transform: rotate(0deg) scale(1.05);
+        }
+
+        .quote-card::before {
+            content: "❝";
+            font-size: 4em;
+            color: #FFD700;
+            opacity: 0.5;
+            position: absolute;
+            top: -10px;
+            left: 10px;
+        }
+
+        .quote-text {
+            font-style: italic;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .quote-author {
+            font-family: 'Chewy', cursive;
+            color: #FF69B4;
+            text-align: right;
+        }
+
+        /* MERCH SECTION */
+        .merch-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .merch-item {
+            background: linear-gradient(180deg, #2d2d2d, #1a1a1a);
+            border: 5px solid;
+            border-image: repeating-linear-gradient(
+                90deg,
+                #FFD700 0px,
+                #FFD700 10px,
+                #C41E3A 10px,
+                #C41E3A 20px
+            ) 1;
+            border-radius: 20px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .merch-item::before {
+            content: "🎁";
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            font-size: 4em;
+            opacity: 0.2;
+            transform: rotate(15deg);
+        }
+
+        .merch-item:hover {
+            transform: translateY(-10px) rotate(2deg);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.3);
+        }
+
+        .merch-emoji {
+            font-size: 5em;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .merch-name {
+            font-family: 'Chewy', cursive;
+            font-size: 1.5em;
+            color: #FFD700;
             margin-bottom: 10px;
         }
-        
-        .counter {
-            font-size: 3em;
-            color: white;
-            font-family: 'Fredoka One', cursive;
-            text-shadow: 3px 3px #ff0000;
+
+        .merch-price {
+            font-family: 'Bangers', cursive;
+            font-size: 2em;
+            color: #FF69B4;
+            text-shadow: 2px 2px 0 #000;
         }
-        
-        /* Music Control */
-        .music-control {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 1001;
+
+        .merch-price::before {
+            content: "ONLY ";
+            font-size: 0.5em;
+            color: #fff;
         }
-        
-        .music-btn {
-            font-size: 3em;
-            background: linear-gradient(45deg, #ff0000, #00ff00);
-            border: 4px solid #ffd700;
-            border-radius: 50%;
-            width: 80px;
-            height: 80px;
-            cursor: pointer;
-            animation: pulse 1s ease-in-out infinite;
-            box-shadow: 0 0 20px #ffd700;
+
+        .merch-review {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 2px dashed #FFD700;
+            font-style: italic;
+            font-size: 0.9em;
+            color: #ccc;
         }
-        
-        .music-btn:hover {
-            transform: scale(1.2);
-        }
-        
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #ffd700;
+
+        .stars {
+            color: #FFD700;
             font-size: 1.2em;
+            margin-bottom: 5px;
         }
-        
-        /* Floating decorations */
-        .floating {
-            position: fixed;
-            font-size: 3em;
-            animation: float 4s ease-in-out infinite;
-            z-index: 998;
+
+        /* COCKTAIL SECTION */
+        .cocktail-menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
         }
-        
+
+        .cocktail-card {
+            background: 
+                radial-gradient(circle at top, rgba(255, 215, 0, 0.3), transparent 60%),
+                linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.95));
+            border: 4px solid #FFD700;
+            border-radius: 30px;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cocktail-card::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(
+                from 0deg,
+                transparent,
+                rgba(255, 215, 0, 0.1),
+                transparent,
+                rgba(255, 105, 180, 0.1),
+                transparent
+            );
+            animation: rotate-bg 10s linear infinite;
+        }
+
+        @keyframes rotate-bg {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .cocktail-card > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cocktail-emoji {
+            font-size: 4em;
+            display: block;
+            margin-bottom: 15px;
+            animation: float 3s ease-in-out infinite;
+        }
+
         @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-30px) rotate(10deg); }
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
-        
-        .float-1 { top: 20%; left: 5%; animation-delay: 0s; }
-        .float-2 { top: 40%; right: 5%; animation-delay: 1s; }
-        .float-3 { top: 60%; left: 8%; animation-delay: 2s; }
-        .float-4 { top: 80%; right: 8%; animation-delay: 3s; }
-        
-        /* Visitor Counter Style */
-        .visitor-counter {
-            font-family: 'Courier New', monospace;
-            background: #000;
-            color: #0f0;
-            padding: 10px 20px;
-            border: 3px inset #808080;
+
+        .cocktail-name {
+            font-family: 'Mountains of Christmas', cursive;
+            font-size: 1.8em;
+            color: #FFD700;
+            text-shadow: 2px 2px 0 #C41E3A;
+            margin-bottom: 15px;
+        }
+
+        .cocktail-desc {
+            font-size: 1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .cocktail-garnish {
+            background: rgba(255, 105, 180, 0.3);
+            border-radius: 20px;
+            padding: 15px;
+            font-family: 'Chewy', cursive;
+            color: #FFD700;
+        }
+
+        .cocktail-garnish::before {
+            content: "🎀 FESTIVE GARNISH: ";
+        }
+
+        /* DONATION SECTION */
+        .donation-section {
+            text-align: center;
+        }
+
+        .thermometer-container {
+            max-width: 200px;
+            margin: 40px auto;
+            position: relative;
+        }
+
+        .thermometer {
+            width: 60px;
+            height: 300px;
+            background: linear-gradient(180deg, #333, #222);
+            border: 5px solid #FFD700;
+            border-radius: 30px 30px 50px 50px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .thermometer-fill {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 90%;
+            background: linear-gradient(180deg, #C41E3A, #FF69B4, #FFD700);
+            border-radius: 0 0 45px 45px;
+            animation: fill-pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes fill-pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        .thermometer-bulb {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #C41E3A, #FF69B4);
+            border: 5px solid #FFD700;
+            border-radius: 50%;
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            box-shadow: 0 0 30px rgba(255, 105, 180, 0.5);
+        }
+
+        .donation-amount {
+            font-family: 'Bangers', cursive;
+            font-size: 3em;
+            color: #FFD700;
+            text-shadow: 3px 3px 0 #C41E3A;
+            margin: 20px 0;
+        }
+
+        .donation-text {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+        }
+
+        .donate-button {
             display: inline-block;
-            margin-top: 10px;
+            font-family: 'Chewy', cursive;
+            font-size: 1.5em;
+            color: #1a472a;
+            background: linear-gradient(180deg, #FFD700, #FFA500);
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            border: 4px solid #228B22;
+            box-shadow: 0 5px 0 #1a472a;
+            transition: all 0.2s ease;
+        }
+
+        .donate-button:hover {
+            transform: translateY(3px);
+            box-shadow: 0 2px 0 #1a472a;
+        }
+
+        /* QUIZ SECTION */
+        .quiz-section {
+            background: 
+                repeating-conic-gradient(
+                    from 0deg,
+                    rgba(255, 215, 0, 0.1) 0deg 30deg,
+                    transparent 30deg 60deg
+                ),
+                linear-gradient(180deg, rgba(123, 63, 160, 0.9), rgba(75, 0, 130, 0.9)) !important;
+        }
+
+        .quiz-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.6);
+            border: 5px solid #FF69B4;
+            border-radius: 30px;
+            padding: 40px;
+        }
+
+        .quiz-question {
+            font-family: 'Chewy', cursive;
+            font-size: 1.5em;
+            color: #FFD700;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .quiz-option {
+            background: rgba(255, 215, 0, 0.2);
+            border: 3px solid #FFD700;
+            border-radius: 20px;
+            padding: 15px 25px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        .quiz-option:hover {
+            background: rgba(255, 105, 180, 0.4);
+            transform: translateX(10px);
+            border-color: #FF69B4;
+        }
+
+        .quiz-result {
+            display: none;
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.3), rgba(255, 105, 180, 0.3));
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+
+        .quiz-result.show {
+            display: block;
+            animation: pop-in 0.5s ease;
+        }
+
+        @keyframes pop-in {
+            0% { transform: scale(0); opacity: 0; }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        /* NEWSROOM SECTION */
+        .newsroom-updates {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .news-item {
+            background: rgba(0, 0, 0, 0.7);
+            border-left: 6px solid #C41E3A;
+            padding: 20px 25px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .news-item:hover {
+            border-left-color: #FFD700;
+            transform: translateX(10px);
+        }
+
+        .news-date {
+            font-family: 'Bangers', cursive;
+            color: #FF69B4;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+
+        .news-headline {
+            font-family: 'Chewy', cursive;
+            font-size: 1.4em;
+            color: #FFD700;
+            margin-bottom: 10px;
+        }
+
+        .news-tag {
+            display: inline-block;
+            background: #C41E3A;
+            color: #fff;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            margin-right: 10px;
+        }
+
+        .news-tag.breaking {
+            background: #FFD700;
+            color: #000;
+            animation: flash 1s ease-in-out infinite;
+        }
+
+        @keyframes flash {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* FOOTER */
+        footer {
+            background: linear-gradient(180deg, #1a1a1a, #000);
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 10px solid;
+            border-image: repeating-linear-gradient(
+                90deg,
+                #FFD700 0px,
+                #FFD700 20px,
+                #C41E3A 20px,
+                #C41E3A 40px,
+                #228B22 40px,
+                #228B22 60px
+            ) 1;
+        }
+
+        .footer-raccoon {
+            font-size: 5em;
+            animation: drunk-wobble 3s ease-in-out infinite;
+        }
+
+        @keyframes drunk-wobble {
+            0%, 100% { transform: rotate(-15deg); }
+            50% { transform: rotate(15deg); }
+        }
+
+        .footer-text {
+            font-family: 'Chewy', cursive;
+            color: #FFD700;
+            margin: 20px 0;
+        }
+
+        .disclaimer {
+            font-size: 0.8em;
+            color: #888;
+            max-width: 600px;
+            margin: 20px auto 0;
+            line-height: 1.5;
+        }
+
+        .emoji-parade {
+            font-size: 1.5em;
+            margin-top: 20px;
+            animation: emoji-bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes emoji-bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-event {
+                flex-direction: column !important;
+            }
+
+            .timeline-content {
+                margin: 20px 0 20px 50px;
+                text-align: left !important;
+            }
+
+            .timeline-emoji {
+                left: 20px;
+                transform: translateX(-50%);
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* ASCII ART SECTION */
+        .ascii-art {
+            font-family: monospace;
+            white-space: pre;
+            font-size: 0.6em;
+            line-height: 1;
+            color: #FFD700;
+            text-align: center;
+            margin: 20px 0;
+            text-shadow: 0 0 10px #FFD700;
+        }
+
+        /* CEILING TILE MEMORIAL */
+        .ceiling-memorial {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 5px;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        .ceiling-tile {
+            aspect-ratio: 1;
+            background: 
+                repeating-linear-gradient(
+                    45deg,
+                    #F5DEB3 0px,
+                    #F5DEB3 2px,
+                    #E6D5A8 2px,
+                    #E6D5A8 4px
+                );
+            border: 2px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .ceiling-tile:hover {
+            transform: translateY(20px) rotate(5deg);
+            box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .ceiling-tile.broken {
+            background: 
+                linear-gradient(45deg, transparent 40%, #333 40%, #333 60%, transparent 60%),
+                linear-gradient(-45deg, transparent 40%, #333 40%, #333 60%, transparent 60%),
+                #1a1a1a;
+            transform: rotate(15deg) translateY(10px);
         }
     </style>
 </head>
 <body>
-    <!-- Snowflakes Container -->
-    <div class="snowflakes" id="snowflakes"></div>
-    
-    <!-- Christmas Lights Border -->
-    <div class="lights-border">
-        <div class="light-string top" id="lights-top"></div>
-        <div class="light-string bottom" id="lights-bottom"></div>
-        <div class="light-string left" id="lights-left"></div>
-        <div class="light-string right" id="lights-right"></div>
+    <!-- SNOWFLAKES -->
+    <div class="snowflake" style="left: 5%; animation-duration: 8s; animation-delay: 0s;">❄️</div>
+    <div class="snowflake" style="left: 15%; animation-duration: 12s; animation-delay: 2s;">🦝</div>
+    <div class="snowflake" style="left: 25%; animation-duration: 10s; animation-delay: 4s;">❄️</div>
+    <div class="snowflake" style="left: 35%; animation-duration: 14s; animation-delay: 1s;">🍾</div>
+    <div class="snowflake" style="left: 45%; animation-duration: 9s; animation-delay: 3s;">❄️</div>
+    <div class="snowflake" style="left: 55%; animation-duration: 11s; animation-delay: 5s;">🎄</div>
+    <div class="snowflake" style="left: 65%; animation-duration: 13s; animation-delay: 2s;">❄️</div>
+    <div class="snowflake" style="left: 75%; animation-duration: 8s; animation-delay: 4s;">🦝</div>
+    <div class="snowflake" style="left: 85%; animation-duration: 10s; animation-delay: 1s;">❄️</div>
+    <div class="snowflake" style="left: 95%; animation-duration: 15s; animation-delay: 3s;">✨</div>
+
+    <!-- BREAKING NEWS BANNER -->
+    <div class="breaking-news">
+        <span class="scroll-text">
+            🚨 BREAKING NEWS 🚨 RACCOON CAUSES HOLIDAY CHEER • VIRGINIA ABC STORE INVADED BY FURRY BANDIT • 
+            $156,000+ RAISED FOR ANIMAL SHELTER • SUSPECT RELEASED BACK INTO WILD • BOURBON LEVELS CRITICALLY LOW • 
+            CEILING TILES FILE FOR EMOTIONAL SUPPORT • 🦝🍾🎄✨
+        </span>
     </div>
-    
-    <!-- Floating Decorations -->
-    <div class="floating float-1">🦌</div>
-    <div class="floating float-2">⭐</div>
-    <div class="floating float-3">🔔</div>
-    <div class="floating float-4">❄️</div>
-    
-    <!-- Main Content -->
-    <div class="container">
-        <div class="title-container">
-            <h1>🎄 MERRY CHRISTMAS! 🎄</h1>
-            <p class="subtitle bouncing">✨ Welcome to the TACKIEST Christmas Site EVER! ✨</p>
+
+    <!-- SPARKLE BORDER -->
+    <div class="sparkle-border"></div>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#legend">📜 The Legend</a>
+        <a href="#merch">👕 Official Merch</a>
+        <a href="#cocktails">🍸 Cocktail Corner</a>
+        <a href="#donate">❤️ Support the Shelter</a>
+        <a href="#quiz">🎲 Take the Quiz</a>
+        <a href="#news">📰 Newsroom</a>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="ascii-art">
+    ★  ★     ★         ★    ★
+         ★       ★   ★    
+   ★   ★    ★      ★    ★   ★
         </div>
         
-        <!-- Scrolling Marquee -->
-        <div class="marquee-container">
-            <div class="marquee">
-                🎅 HO HO HO! 🎁 HAPPY HOLIDAYS! ❄️ JINGLE ALL THE WAY! 🦌 SANTA IS COMING! 🎄 DECK THE HALLS! 🔔 JOY TO THE WORLD! ⭐ SEASON'S GREETINGS! 🎅 HO HO HO! 🎁 HAPPY HOLIDAYS! ❄️
+        <h1>🦝 THE TRASHED PANDA 🍾</h1>
+        <h2>Virginia's Most Legendary Holiday Hero Since November 29, 2025</h2>
+        
+        <!-- HERO IMAGE: Glittery raccoon sprawled beside spilled bourbon wearing a Santa hat -->
+        <div class="raccoon-hero" title="Hover over me... if you dare 😵‍💫">
+            <div class="raccoon-hero-inner">
+                🦝
+            </div>
+        </div>
+        <!-- ALT TEXT: "A gloriously disheveled raccoon regretting everything except the whiskey, 
+             sprawled in a splooted position next to overturned bourbon bottles, 
+             wearing a crooked Santa hat, surrounded by glitter and broken dreams (and ceiling tiles)" -->
+        
+        <p style="font-family: 'Chewy', cursive; font-size: 1.3em; max-width: 700px; margin: 20px auto; color: #fff; text-shadow: 2px 2px 0 #000;">
+            One fateful November night, a brave (or extremely thirsty) raccoon crashed through 
+            the ceiling of a Virginia ABC store and taught us all the true meaning of the holiday spirit: 
+            <strong style="color: #FFD700;">Chaos. Bourbon. Redemption.</strong> 🎄✨
+        </p>
+        
+        <a href="#legend" class="cta-button">🦝 MEET THE LEGEND → 🍾</a>
+        
+        <div class="ascii-art" style="margin-top: 30px;">
+   \\_______/
+    |       |
+    | 🦝🍾  |
+    |_______|
+    BOURBON CO.
+        </div>
+    </header>
+
+    <!-- THE LEGEND SECTION -->
+    <section id="legend">
+        <h2 class="section-title">📜 The Legend of the Trashed Panda 📜</h2>
+        
+        <div class="legend-content">
+            <p>
+                'Twas the night before December, and all through the store, not a creature was stirring—until there was a CRASH from above! On November 29th, 2025, in the hallowed aisles of a Virginia ABC liquor store, destiny descended through the ceiling tiles in the form of one absolutely fearless raccoon. This masked marauder had apparently decided that traditional foraging was for amateurs, and that fine Virginia spirits were the true path to enlightenment.
+            </p>
+            
+            <p>
+                The furry intruder proceeded to embark on what witnesses would later describe as "the most chaotic wine-and-dine experience in Virginia history." Bottles were toppled. Shelves were conquered. The bourbon section wept. Our hero showed no discrimination in his tastes—sampling what appeared to be anything he could get his tiny, grabby hands on. Security footage revealed a creature of pure, unfiltered determination. A spirit animal, if you will. Several spirits, actually.
+            </p>
+            
+            <p>
+                When authorities finally arrived, they found the culprit in what can only be described as the ultimate position of defeat: completely "splooted out" in the store bathroom, drunk as a skunk (though technically a raccoon), wearing an expression that suggested he had seen the face of God in the bottom of a whiskey bottle and was profoundly at peace with his choices. The scene was both deeply disturbing and oddly inspirational.
+            </p>
+        </div>
+
+        <!-- TIMELINE -->
+        <h3 style="font-family: 'Bangers', cursive; font-size: 2em; color: #FF69B4; text-align: center; margin: 50px 0 30px;">
+            ⏰ TIMELINE OF THE RAMPAGE ⏰
+        </h3>
+        
+        <div class="timeline">
+            <div class="timeline-event">
+                <div class="timeline-content">
+                    <div class="timeline-time">🌙 11:47 PM</div>
+                    <p>Ceiling tile trembles ominously. Store security camera captures what appears to be tiny paws testing structural integrity.</p>
+                </div>
+                <div class="timeline-emoji">👀</div>
+            </div>
+            
+            <div class="timeline-event">
+                <div class="timeline-content">
+                    <div class="timeline-time">💥 11:52 PM</div>
+                    <p>CRASH! One very confident raccoon descends from above like a furry angel of chaos. Ceiling tile sacrifices itself for the cause.</p>
+                </div>
+                <div class="timeline-emoji">🦝</div>
+            </div>
+            
+            <div class="timeline-event">
+                <div class="timeline-content">
+                    <div class="timeline-time">🍾 11:53 PM - 2:30 AM</div>
+                    <p>The Great Sampling begins. Bourbon aisle: devastated. Wine section: explored. Dignity: abandoned. Our hero shows remarkable dedication to his craft.</p>
+                </div>
+                <div class="timeline-emoji">🥃</div>
+            </div>
+            
+            <div class="timeline-event">
+                <div class="timeline-content">
+                    <div class="timeline-time">😵‍💫 ~3:00 AM</div>
+                    <p>Subject located in bathroom, completely splooted, presumably contemplating existence. Zero regrets detected.</p>
+                </div>
+                <div class="timeline-emoji">💤</div>
+            </div>
+            
+            <div class="timeline-event">
+                <div class="timeline-content">
+                    <div class="timeline-time">🚔 6:15 AM</div>
+                    <p>Store employees arrive, discover the aftermath, and question every life choice that led them to this moment.</p>
+                </div>
+                <div class="timeline-emoji">😱</div>
+            </div>
+            
+            <div class="timeline-event">
+                <div class="timeline-content">
+                    <div class="timeline-time">🌲 Later That Day</div>
+                    <p>After sleeping it off, our hero is safely released back into the wild—presumably to tell his grandchildren about that one legendary night.</p>
+                </div>
+                <div class="timeline-emoji">🎄</div>
+            </div>
+        </div>
+
+        <!-- WITNESS QUOTES -->
+        <h3 style="font-family: 'Bangers', cursive; font-size: 2em; color: #FF69B4; text-align: center; margin: 50px 0 30px;">
+            🗣️ TOTALLY REAL WITNESS ACCOUNTS 🗣️
+        </h3>
+        
+        <div class="witness-quotes">
+            <div class="quote-card">
+                <p class="quote-text">"I've worked retail for 15 years. I thought I'd seen everything. I was wrong. So, so wrong."</p>
+                <p class="quote-author">— Brenda, Store Manager 🦝</p>
+            </div>
+            
+            <div class="quote-card">
+                <p class="quote-text">"He had this look in his eyes... like he'd found his purpose. I've never seen such determination. Honestly? Inspiring."</p>
+                <p class="quote-author">— Officer Thompson 🚔</p>
+            </div>
+            
+            <div class="quote-card">
+                <p class="quote-text">"The ceiling tile just... gave way. Like it knew. Like it was destiny. I'll never look at drop ceilings the same way again."</p>
+                <p class="quote-author">— Dave, Night Security 👷</p>
+            </div>
+            
+            <div class="quote-card">
+                <p class="quote-text">"My therapist says I need to 'process' what I saw in that bathroom. We're gonna need more sessions."</p>
+                <p class="quote-author">— Anonymous Employee 😵</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MERCH SECTION -->
+    <section id="merch">
+        <h2 class="section-title">👕 Official Trashed Panda Holiday Merch 🎁</h2>
+        
+        <p style="text-align: center; font-size: 1.2em; margin-bottom: 30px; color: #FFD700;">
+            All proceeds benefit the Hanover County Animal Shelter! 🦝❤️<br>
+            <span style="font-size: 0.9em; color: #FF69B4;">Because one drunk raccoon can change the world.</span>
+        </p>
+        
+        <div class="merch-grid">
+            <div class="merch-item">
+                <span class="merch-emoji">👕</span>
+                <h3 class="merch-name">"I Survived the Splooting" T-Shirt</h3>
+                <p class="merch-price">$25</p>
+                <div class="merch-review">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Wore this to Thanksgiving dinner. Grandma had questions. Worth it."</p>
+                    <small>— BourbonBandit2025</small>
+                </div>
+            </div>
+            
+            <div class="merch-item">
+                <span class="merch-emoji">🧥</span>
+                <h3 class="merch-name">"Ceiling Crasher" Premium Hoodie</h3>
+                <p class="merch-price">$42</p>
+                <div class="merch-review">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Bought this hoodie; now I fear ceiling tiles. Also I've never been warmer or more festive. 10/10."</p>
+                    <small>— ChaosGoblin_VA</small>
+                </div>
+            </div>
+            
+            <div class="merch-item">
+                <span class="merch-emoji">🏷️</span>
+                <h3 class="merch-name">"Trashed & Dashed" Sticker Pack</h3>
+                <p class="merch-price">$5</p>
+                <div class="merch-review">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Put one on my laptop. My boss asked if I was okay. I said no. He understood."</p>
+                    <small>— StickerQueen_RVA</small>
+                </div>
+            </div>
+            
+            <div class="merch-item">
+                <span class="merch-emoji">🥤</span>
+                <h3 class="merch-name">"Sploot Responsibly" Tumbler</h3>
+                <p class="merch-price">$36</p>
+                <div class="merch-review">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Finally, a tumbler that understands my lifestyle. Keeps coffee hot and bourbon at the perfect 'making poor decisions' temperature."</p>
+                    <small>— DefinitelyNotARaccoon</small>
+                </div>
             </div>
         </div>
         
-        <!-- Spinning Decorations -->
-        <div class="decorations">
-            <span class="decoration">🎄</span>
-            <span class="decoration">⭐</span>
-            <span class="decoration">🎅</span>
-            <span class="decoration">🦌</span>
-            <span class="decoration">🎁</span>
-            <span class="decoration">❄️</span>
-            <span class="decoration">🔔</span>
-            <span class="decoration">🧦</span>
-        </div>
+        <p style="text-align: center; margin-top: 40px; font-family: 'Bangers', cursive; font-size: 1.5em; color: #FFD700;">
+            🎄 LIMITED HOLIDAY EDITION! 🎄<br>
+            <span style="font-size: 0.7em; color: #FF69B4;">Order now before they're gone like bourbon at a raccoon party!</span>
+        </p>
+    </section>
+
+    <!-- COCKTAIL SECTION -->
+    <section id="cocktails">
+        <h2 class="section-title">🍸 The Official Cocktail Corner 🍹</h2>
         
-        <!-- ASCII Christmas Tree -->
-        <div class="tree-section">
-            <pre class="ascii-tree">
-        ⭐
-        🎄
-       🎄🎄🎄
-      🎄🔴🎄🔴🎄
-     🎄🎄🔵🎄🎄🔵🎄
-    🎄🔴🎄🎄🔴🎄🎄🔴🎄
-   🎄🎄🔵🎄🎄🔵🎄🎄🔵🎄🎄
-  🎄🔴🎄🔴🎄🔴🎄🔴🎄🔴🎄🔴🎄
-        🟫🟫🟫
-      🎁🎁🎁🎁🎁
-            </pre>
-        </div>
+        <p style="text-align: center; font-size: 1.2em; margin-bottom: 40px;">
+            The Virginia ABC Authority created these official cocktails in honor of our hero!<br>
+            <span style="color: #FF69B4;">Please drink more responsibly than certain raccoons. 🦝</span>
+        </p>
         
-        <!-- Gift Boxes -->
-        <div class="gifts">
-            <span class="gift">🎁</span>
-            <span class="gift">🎀</span>
-            <span class="gift">🎁</span>
-            <span class="gift">🎀</span>
-            <span class="gift">🎁</span>
-        </div>
-        
-        <!-- Message Box -->
-        <div class="message-box">
-            <p>🎅 FROM OUR FAMILY TO YOURS 🎅</p>
-            <p>May your days be MERRY and BRIGHT!</p>
-            <p>🎄🎁❄️⭐🔔🦌🧦✨</p>
-        </div>
-        
-        <!-- Countdown -->
-        <div class="counter-section">
-            <div class="counter-title">🎅 DAYS UNTIL CHRISTMAS 🎅</div>
-            <div class="counter" id="countdown"></div>
-            <div class="visitor-counter">
-                You are visitor #: <span id="visitor-count">1,337,420</span>
+        <div class="cocktail-menu">
+            <div class="cocktail-card">
+                <span class="cocktail-emoji">🥃</span>
+                <h3 class="cocktail-name">🎄 Rye Rascal Sour 🎄</h3>
+                <p class="cocktail-desc">
+                    A bold, mischievous blend of Virginia rye whiskey, fresh lemon, and a splash of maple syrup 
+                    for that "I just broke into a liquor store" sweetness. Served with an attitude.
+                </p>
+                <div class="cocktail-garnish">
+                    Rim with crushed candy canes and garnish with a tiny Santa hat on the glass. Add an orange peel twisted to look like it's seen things.
+                </div>
+            </div>
+            
+            <div class="cocktail-card">
+                <span class="cocktail-emoji">🌙</span>
+                <h3 class="cocktail-name">✨ Midnight Masked Gin Fizz ✨</h3>
+                <p class="cocktail-desc">
+                    Mysterious as a raccoon at midnight, this effervescent delight combines premium gin, 
+                    elderflower liqueur, and sparkling water, finished with a dash of activated charcoal 
+                    for that "mask" aesthetic. Because drama.
+                </p>
+                <div class="cocktail-garnish">
+                    Top with powdered sugar "snow," a sprig of rosemary made to look like a tiny Christmas tree, and edible glitter. SO. MUCH. GLITTER.
+                </div>
+            </div>
+            
+            <div class="cocktail-card">
+                <span class="cocktail-emoji">🦝</span>
+                <h3 class="cocktail-name">🍂 Trash Panda Old Fashioned 🍂</h3>
+                <p class="cocktail-desc">
+                    The classic, reimagined for chaos. Premium bourbon muddled with demerara sugar, 
+                    aromatic bitters, and a hint of black walnut for that "foraging in the dumpster of life" 
+                    earthiness. Sophisticated yet feral.
+                </p>
+                <div class="cocktail-garnish">
+                    Served in a glass rimmed with brown sugar and cinnamon. Garnish with a Luxardo cherry wearing a tiny knit scarf and an orange twist curled to look splooted.
+                </div>
             </div>
         </div>
         
-        <!-- More Spinning Stuff -->
-        <div class="decorations">
-            <span class="decoration">🍪</span>
-            <span class="decoration">🥛</span>
-            <span class="decoration">🎅</span>
-            <span class="decoration">🛷</span>
-            <span class="decoration">🌟</span>
+        <div style="text-align: center; margin-top: 50px; padding: 30px; background: rgba(0,0,0,0.5); border-radius: 20px; border: 3px dashed #FFD700;">
+            <h3 style="font-family: 'Chewy', cursive; color: #FF69B4; font-size: 1.5em;">
+                🍾 PRO MIXOLOGIST TIP 🍾
+            </h3>
+            <p style="font-size: 1.1em; margin-top: 15px;">
+                For maximum authenticity, consume while lying flat on your bathroom floor.<br>
+                <span style="color: #FFD700; font-style: italic;">(Just kidding. Please sploot responsibly. Unlike SOME raccoons we know.)</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- DONATION SECTION -->
+    <section id="donate" class="donation-section">
+        <h2 class="section-title">❤️ Support Hanover County Animal Shelter ❤️</h2>
+        
+        <div class="thermometer-container">
+            <div class="thermometer">
+                <div class="thermometer-fill"></div>
+            </div>
+            <div class="thermometer-bulb">🦝</div>
         </div>
         
-        <footer>
-            <p>🎄 Made with ❤️ and too much eggnog 🎄</p>
-            <p>Best viewed with Netscape Navigator 4.0 😉</p>
-            <p class="bouncing">🔔 RING RING RING 🔔</p>
-        </footer>
-    </div>
-    
-    <!-- Music Control Button -->
-    <button class="music-btn" id="musicBtn" onclick="toggleMusic()">🎵</button>
-    
-    <!-- Christmas Music (royalty-free jingle bells midi-style) -->
-    <audio id="christmasMusic" loop>
-        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-    </audio>
-    
+        <div class="donation-amount">$156,000+ RAISED!</div>
+        
+        <p class="donation-text">
+            Thanks to the viral fame of one very thirsty raccoon, the good people of Virginia 
+            (and beyond!) have opened their hearts and wallets. The official Trashed Panda merchandise 
+            has raised over <strong>$156,000</strong> for the Hanover County Animal Shelter—helping 
+            countless animals find loving homes.
+        </p>
+        
+        <p class="donation-text" style="color: #FFD700;">
+            🎄 This holiday season, consider making a donation in honor of legendary tipsy wildlife everywhere. 🎄
+        </p>
+        
+        <a href="https://www.petfinder.com/member/us/va/hanover/hanover-humane-society-va201/" class="donate-button" target="_blank">
+            🦝 Donate to the Shelter 💝
+        </a>
+        
+        <p style="margin-top: 30px; font-style: italic; color: #ccc;">
+            Because every animal deserves a second chance—even the ones who make 
+            questionable decisions involving bourbon and ceiling tiles.
+        </p>
+    </section>
+
+    <!-- QUIZ SECTION -->
+    <section id="quiz" class="quiz-section">
+        <h2 class="section-title">🎲 Which Trashed Panda Cocktail Are You? 🍹</h2>
+        
+        <div class="quiz-container">
+            <div class="quiz-question">
+                Question 1: It's Friday night. What's your move? 🌙
+            </div>
+            <div class="quiz-options">
+                <div class="quiz-option" onclick="showResult('rye')">
+                    🔥 Cause a little chaos. Rules are suggestions.
+                </div>
+                <div class="quiz-option" onclick="showResult('gin')">
+                    ✨ Something elegant but with a mysterious edge.
+                </div>
+                <div class="quiz-option" onclick="showResult('bourbon')">
+                    🛋️ Keep it classic. Maybe lie on the floor later.
+                </div>
+            </div>
+            
+            <div id="result-rye" class="quiz-result">
+                <h3 style="font-family: 'Mountains of Christmas', cursive; font-size: 2em; color: #FFD700;">
+                    You're the RYE RASCAL SOUR! 🥃
+                </h3>
+                <p style="margin-top: 15px;">
+                    Bold, unpredictable, and not afraid to make an entrance (possibly through a ceiling). 
+                    You live life on your own terms and your terms include MISCHIEF.
+                </p>
+                <p style="font-size: 3em; margin-top: 15px;">🦝🔥✨</p>
+            </div>
+            
+            <div id="result-gin" class="quiz-result">
+                <h3 style="font-family: 'Mountains of Christmas', cursive; font-size: 2em; color: #FFD700;">
+                    You're the MIDNIGHT MASKED GIN FIZZ! 🌙
+                </h3>
+                <p style="margin-top: 15px;">
+                    Mysterious, sophisticated, but with a chaotic sparkle in your eye. 
+                    You prefer your entrances dramatic and your exits legendary.
+                </p>
+                <p style="font-size: 3em; margin-top: 15px;">✨🌙🦝</p>
+            </div>
+            
+            <div id="result-bourbon" class="quiz-result">
+                <h3 style="font-family: 'Mountains of Christmas', cursive; font-size: 2em; color: #FFD700;">
+                    You're the TRASH PANDA OLD FASHIONED! 🍂
+                </h3>
+                <p style="margin-top: 15px;">
+                    A timeless classic with hidden depths. You appreciate the finer things 
+                    but aren't above a good sploot when the mood strikes. Refined chaos is still chaos.
+                </p>
+                <p style="font-size: 3em; margin-top: 15px;">🦝🍂🥃</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CEILING TILE MEMORIAL -->
+    <section id="memorial">
+        <h2 class="section-title">🕯️ Ceiling Tile Memorial Garden 🕯️</h2>
+        
+        <p style="text-align: center; font-size: 1.1em; margin-bottom: 30px; font-style: italic;">
+            In loving memory of the ceiling tiles that gave their structural integrity 
+            so that one raccoon could follow his dreams. Hover to pay respects.
+        </p>
+        
+        <div class="ceiling-memorial">
+            <div class="ceiling-tile">😇</div>
+            <div class="ceiling-tile">🙏</div>
+            <div class="ceiling-tile broken">💔</div>
+            <div class="ceiling-tile">😇</div>
+            <div class="ceiling-tile">🙏</div>
+            <div class="ceiling-tile">😇</div>
+            <div class="ceiling-tile">🙏</div>
+            <div class="ceiling-tile">😇</div>
+            <div class="ceiling-tile broken">🦝</div>
+            <div class="ceiling-tile">🙏</div>
+            <div class="ceiling-tile">😇</div>
+            <div class="ceiling-tile">🙏</div>
+        </div>
+        
+        <p style="text-align: center; font-family: 'Chewy', cursive; color: #FFD700; font-size: 1.3em; margin-top: 30px;">
+            "They held the line... until they couldn't." 🕊️
+        </p>
+    </section>
+
+    <!-- NEWSROOM SECTION -->
+    <section id="news">
+        <h2 class="section-title">📰 Trashed Panda Newsroom 📺</h2>
+        
+        <div class="newsroom-updates">
+            <div class="news-item">
+                <span class="news-tag breaking">BREAKING</span>
+                <span class="news-tag">WILDLIFE</span>
+                <div class="news-date">December 9, 2025 • 2:47 PM</div>
+                <h3 class="news-headline">RACCOON SUCCESSFULLY RELEASED BACK INTO WILD; "NO COMMENT" ON FUTURE PLANS</h3>
+                <p>After a thorough hangover recovery period and what sources describe as "intense hydration therapy," the infamous Virginia ABC raccoon has been released back into his natural habitat. Wildlife officials confirm he appeared "remorseful but not regretful."</p>
+            </div>
+            
+            <div class="news-item">
+                <span class="news-tag">MERCHANDISE</span>
+                <span class="news-tag">CHARITY</span>
+                <div class="news-date">December 7, 2025 • 11:23 AM</div>
+                <h3 class="news-headline">TRASHED PANDA MERCH SALES EXCEED $156,000; ANIMAL SHELTER OVERWHELMED WITH GRATITUDE</h3>
+                <p>The Hanover County Animal Shelter reports unprecedented donation levels following the viral sensation. "We've never seen anything like this," said a spokesperson, wiping away a tear. "One chaotic raccoon has done more for animal welfare than our entire marketing budget."</p>
+            </div>
+            
+            <div class="news-item">
+                <span class="news-tag">BEVERAGES</span>
+                <span class="news-tag">CULTURE</span>
+                <div class="news-date">December 5, 2025 • 4:15 PM</div>
+                <h3 class="news-headline">VIRGINIA ABC RELEASES OFFICIAL "TRASHED PANDA" COCKTAIL RECIPES; BARTENDERS NATIONWIDE REJOICE</h3>
+                <p>In an unprecedented move, the Virginia Alcoholic Beverage Control Authority has released three official cocktail recipes inspired by the incident. The "Trash Panda Old Fashioned" is reportedly already the most requested drink in Richmond.</p>
+            </div>
+            
+            <div class="news-item">
+                <span class="news-tag">OPINION</span>
+                <div class="news-date">December 3, 2025 • 9:00 AM</div>
+                <h3 class="news-headline">OP-ED: "THIS RACCOON IS ALL OF US" — WHY THE TRASHED PANDA SPEAKS TO THE HUMAN CONDITION</h3>
+                <p>Think pieces flood the internet as philosophers, psychologists, and people who think too hard about things weigh in on why a drunk raccoon has captured the nation's heart. "He represents our collective desire to just... sploot," writes one theorist.</p>
+            </div>
+            
+            <div class="news-item">
+                <span class="news-tag">SATIRE</span>
+                <div class="news-date">December 1, 2025 • 6:00 PM</div>
+                <h3 class="news-headline">RACCOON ENTERS VOLUNTARY REHABILITATION; ISSUES STATEMENT THROUGH PUBLICIST</h3>
+                <p>"My client wishes to express gratitude for the outpouring of support," reads the statement. "He acknowledges that perhaps breaking into a liquor store was 'not his finest moment' but maintains that the bourbon 'was calling to him.' He asks for privacy as he focuses on his recovery and upcoming memoir deal."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-raccoon">🦝</div>
+        
+        <p class="footer-text" style="font-size: 1.5em;">
+            Happy Holidays from Virginia's Favorite Trash Panda! 🎄🍾✨
+        </p>
+        
+        <p class="footer-text">
+            May your ceilings be sturdy and your spirits be high<br>
+            (but maybe not AS high as his were)
+        </p>
+        
+        <div class="emoji-parade">
+            🎄🦝🍾✨🎅🥃❄️🎁🌙🍷🎄🦝🍾✨🎅🥃❄️🎁🌙🍷
+        </div>
+        
+        <p class="disclaimer">
+            ⚠️ DISCLAIMER: No raccoons were harmed in the making of this website or the original incident. 
+            The raccoon was safely released back into the wild after recovering from his adventure. 
+            Please drink responsibly—unlike certain masked bandits we know. 
+            This is a parody/fan site celebrating a real viral event. All proceeds from official merchandise 
+            go to the Hanover County Animal Shelter. 🦝❤️
+        </p>
+        
+        <p style="margin-top: 20px; font-family: 'Chewy', cursive; color: #666;">
+            Made with 🍾 and questionable design choices<br>
+            © 2025 Team Trashed Panda • Not affiliated with Virginia ABC (but we love them)
+        </p>
+    </footer>
+
     <script>
-        // Generate Snowflakes
-        function createSnowflakes() {
-            const container = document.getElementById('snowflakes');
-            const snowflakeChars = ['❄', '❅', '❆', '✦', '✧', '*'];
-            
-            for (let i = 0; i < 50; i++) {
-                const snowflake = document.createElement('div');
-                snowflake.className = 'snowflake';
-                snowflake.innerHTML = snowflakeChars[Math.floor(Math.random() * snowflakeChars.length)];
-                snowflake.style.left = Math.random() * 100 + '%';
-                snowflake.style.animationDuration = (Math.random() * 5 + 5) + 's';
-                snowflake.style.animationDelay = (Math.random() * 10) + 's';
-                snowflake.style.fontSize = (Math.random() * 1.5 + 0.5) + 'em';
-                container.appendChild(snowflake);
-            }
+        // Quiz functionality
+        function showResult(cocktail) {
+            // Hide all results first
+            document.querySelectorAll('.quiz-result').forEach(el => el.classList.remove('show'));
+            // Show selected result
+            document.getElementById('result-' + cocktail).classList.add('show');
+            // Scroll to result
+            document.getElementById('result-' + cocktail).scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
-        
-        // Generate Christmas Lights
-        function createLights() {
-            const colors = ['red', 'green', 'blue', 'yellow', 'pink'];
-            const positions = ['top', 'bottom', 'left', 'right'];
+
+        // Add more snowflakes dynamically
+        function createSnowflake() {
+            const snowflakes = ['❄️', '🦝', '🍾', '✨', '🎄', '⭐'];
+            const snowflake = document.createElement('div');
+            snowflake.className = 'snowflake';
+            snowflake.textContent = snowflakes[Math.floor(Math.random() * snowflakes.length)];
+            snowflake.style.left = Math.random() * 100 + '%';
+            snowflake.style.animationDuration = (Math.random() * 8 + 6) + 's';
+            snowflake.style.fontSize = (Math.random() * 1 + 0.8) + 'em';
+            document.body.appendChild(snowflake);
             
-            positions.forEach(pos => {
-                const container = document.getElementById('lights-' + pos);
-                const count = (pos === 'top' || pos === 'bottom') ? 30 : 20;
-                
-                for (let i = 0; i < count; i++) {
-                    const bulb = document.createElement('div');
-                    bulb.className = 'bulb ' + colors[i % colors.length];
-                    bulb.style.animationDelay = (Math.random() * 0.5) + 's';
-                    container.appendChild(bulb);
+            // Remove after animation
+            setTimeout(() => snowflake.remove(), 15000);
+        }
+
+        // Create new snowflakes periodically
+        setInterval(createSnowflake, 800);
+
+        // Ceiling tile click effect
+        document.querySelectorAll('.ceiling-tile').forEach(tile => {
+            tile.addEventListener('click', function() {
+                if (!this.classList.contains('broken')) {
+                    this.classList.add('broken');
+                    this.textContent = '🦝';
+                    // Play a little animation
+                    this.style.transform = 'translateY(30px) rotate(15deg)';
                 }
             });
-        }
+        });
+
+        // Konami code Easter egg for extra chaos
+        let konamiCode = [];
+        const konamiSequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
         
-        // Christmas Countdown
-        function updateCountdown() {
-            const now = new Date();
-            const christmas = new Date(now.getFullYear(), 11, 25);
+        document.addEventListener('keydown', (e) => {
+            konamiCode.push(e.key);
+            konamiCode = konamiCode.slice(-10);
             
-            if (now > christmas) {
-                christmas.setFullYear(christmas.getFullYear() + 1);
+            if (konamiCode.join(',') === konamiSequence.join(',')) {
+                // MAXIMUM CHAOS MODE
+                document.body.style.animation = 'spin-dizzy 0.5s ease-in-out infinite';
+                alert('🦝 MAXIMUM CHAOS MODE ACTIVATED 🦝\n\nThe raccoon spirit is pleased with your dedication.');
+                setTimeout(() => {
+                    document.body.style.animation = 'none';
+                }, 3000);
             }
-            
-            const diff = christmas - now;
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-            
-            document.getElementById('countdown').innerHTML = 
-                `🎄 ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds 🎄`;
-        }
-        
-        // Music Toggle
-        let musicPlaying = false;
-        function toggleMusic() {
-            const music = document.getElementById('christmasMusic');
-            const btn = document.getElementById('musicBtn');
-            
-            if (musicPlaying) {
-                music.pause();
-                btn.innerHTML = '🎵';
-            } else {
-                music.play();
-                btn.innerHTML = '🔇';
-            }
-            musicPlaying = !musicPlaying;
-        }
-        
-        // Fake visitor counter that slowly increases
-        function updateVisitorCount() {
-            const counter = document.getElementById('visitor-count');
-            let count = parseInt(counter.textContent.replace(/,/g, ''));
-            count += Math.floor(Math.random() * 3);
-            counter.textContent = count.toLocaleString();
-        }
-        
-        // Initialize everything
-        createSnowflakes();
-        createLights();
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
-        setInterval(updateVisitorCount, 5000);
-        
-        // Add some random sparkle cursors on click
-        document.addEventListener('click', function(e) {
-            const sparkle = document.createElement('div');
-            sparkle.innerHTML = '✨';
-            sparkle.style.position = 'fixed';
-            sparkle.style.left = e.clientX + 'px';
-            sparkle.style.top = e.clientY + 'px';
-            sparkle.style.fontSize = '2em';
-            sparkle.style.pointerEvents = 'none';
-            sparkle.style.zIndex = '9999';
-            sparkle.style.animation = 'spin 1s linear';
-            document.body.appendChild(sparkle);
-            setTimeout(() => sparkle.remove(), 1000);
         });
     </script>
 </body>
